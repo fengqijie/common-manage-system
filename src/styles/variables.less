@@ -1,0 +1,95 @@
+/*全局变量（此文件仅作为瓜子平台配色参考，不再引用）*/
+
+/* Config
+  -------------------------- */
+@cp:el-;
+
+/* Colors
+  -------------------------- */
+@color-primary: #53C0A9; // 主题色
+@color-primary-assist: #40ab94; // 主题色辅助颜色
+@color-disabled: #f2f3f7; // 不可用背景色，主要用在按钮不可以用状态的背景
+
+@text-color:#373b3e; // 文本颜色
+@text-assist-color:#757f89;// 辅助文本颜色，主要用在次级文本
+@text-disabled-color:#c2cad1;//文本不可用颜色，主要用在placeholder
+@text-light-color:#fff;// 彩色背景文本颜色
+
+@color-success: #13ce66; // 成功颜色
+@color-warning: #fd9f2d;// 警告颜色
+@color-danger: #ea5858;// 错误颜色
+@color-info: #50bfff; //信息颜色
+
+@color-grey: #dde4ea; // 灰色标签
+@color-white: #fff; // 白色
+@color-black: #000;//黑色
+@color-base-black:#1f2d3d;
+@color-base-silver: #8393A5;
+@color-dark-white: #FBFDFE;
+@color-light-silver:#97a8be;
+
+@border-color:#c2cad1; // 边框颜色
+@border-disabled-color:#dde4ea; // 边框不可用
+@base-disabled-fill:#dde4ea; // 背景色不可用
+@list-base-hover-fill:#f2f3f7; // 列表hover背景颜色
+@base-icon-color: #c2cad1; // 基础图标颜色
+
+@body-fill:#fff; //主体背景色
+@content-fill:#ecf0f5; //内容区域背景色
+@left-sidebar-bg-color:#2B3B58; // 侧边栏背景色
+@left-sidebar-assist-color:#364766; // 侧边栏辅助颜色
+
+/* Shadow
+  -------------------------- */
+@box-shadow-base: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+
+/* Sizes
+  -------------------------- */
+@base-font-size:14px; // 基础字体大小
+@border-radius:2px; // 边框圆角弧度
+@border-radius-small:2px; // 小边框圆角弧度
+@border-radius-circle:100%;
+
+@top-header-height:0; // header高度
+@left-sidebar-width:200px; // 侧边栏宽度
+@left-sidebar-mini-width:50px;// 侧边栏收起时宽度
+
+/* Responsive Variables
+  -------------------------- */
+@screen-xs:                  480px;
+@screen-xs-min:              @screen-xs;
+
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+
+@screen-md:                  992px;
+@screen-md-min:              @screen-md;
+
+@screen-lg:                  1200px;
+@screen-lg-min:              @screen-lg;
+
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);
+
+// Responsive devices
+// 1200px < width
+@lg-device: 		~"(min-width: @{screen-lg})";
+// 992px < width < 1199px
+@md-device: 		~"(min-width: @{screen-md}) and (max-width: @{screen-md-max})";
+// 768px < width < 991px
+@sm-device: 		~"(min-width: @{screen-sm}) and (max-width: @{screen-sm-max})";
+// width < 767px
+@xs-device: 		~"(max-width: @{screen-xs-max})";
+// width < 480px
+@xxs-device:   ~"(max-width: @{screen-xs})";
+
+//Non responsive devices
+// 991px < width
+@non-responsive: ~"(min-width: @{screen-sm-max})";
+
+//Retina Display
+@retina: ~"(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+@high-dpi: ~"only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13/10), only screen and (min-resolution: 120dpi)";
+
+@import "includes/mixin.less";

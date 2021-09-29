@@ -1,0 +1,100 @@
+/*各种box样式集合*/
+
+/*表单box*/
+@form-item-min-width:236px;
+.form-box {
+  padding: 10px;
+  background: #FFF;
+  margin-bottom: 10px;
+  &.el-form--inline{
+    .el-form-item{
+      .el-form-item__label{
+        width: auto;
+        margin-bottom: 0;
+      }
+      .el-form-item__content{
+        >.el-input,.el-select,.el-autocomplete,.el-input-number,.el-cascader{
+          width: @form-item-min-width;
+        }
+        >.el-radio-group,.el-checkbox-group{
+          min-width: @form-item-min-width;
+          vertical-align: initial;
+        }
+      }
+    }
+  }
+  .hr{
+    border-top: 1px solid @border-color;
+    margin: 0 10px 20px;
+  }
+  .footer{
+    text-align: right;
+    &.center{
+      text-align: center;
+    }
+  }
+}
+/*信息展示表单box*/
+.info-form-box{
+  padding: 10px;
+  background: #FFF;
+  &.el-form--inline{
+    .el-form-item{
+      margin-bottom: 10px;
+      .el-form-item__label{
+        min-width: 100px;
+        margin-bottom: 0;
+        padding: 8px 12px 8px 0;
+      }
+      .el-form-item__content{
+        min-width: @form-item-min-width;
+        line-height: 30px;
+      }
+    }
+  }
+  .hr{
+    border-top: 1px solid @border-color;
+    margin: 0 10px 10px;
+  }
+  &.in-card{
+    margin: -10px;
+  }
+}
+/*数据表格box*/
+.table-box{
+  .footer{
+    padding: 5px 10px;
+    border: 1px solid @border-color;
+    border-top-width: 0;
+    background: @color-white;
+    .clearfix();
+    .el-button{
+      padding: 7px 9px;
+      font-size: 12px;
+    }
+    .el-pagination{
+      padding: 0;
+      float: right;
+    }
+  }
+  &.no-border{
+    .el-table{
+      border-width: 0;
+      &::before{
+        height: 0;
+      }
+      &::after{
+        width: 0;
+      }
+    }
+    .footer{
+      border-width: 0;
+    }
+  }
+  &.in-tabs{
+    margin-top: -10px;
+  }
+  &.in-card{
+    margin: -10px;
+  }
+}
