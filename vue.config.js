@@ -5,12 +5,13 @@ module.exports = {
     host: "0.0.0.0",
     port: 8888,
     proxy: {
-      "/gz": {
+      "/api": {
         // dev target
-        target: "https://image.guazistatic.com/",
+        target: "http://127.0.0.1:8888/",
+        pathRewrite: { "^/api": "/" },
         changeOrigin: true
       }
     },
-    disableHostCheck: true,
+    disableHostCheck: true
   }
 };
